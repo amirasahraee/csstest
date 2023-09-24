@@ -53,7 +53,7 @@ function App() {
                 </li>
             </ul>
         </div>
-        <div className='min-w-[800px] w-3/5 h-full ml-4 pt-3 space-y-5'>
+        <div className='min-w-[950px] w-3/5 h-full ml-4 pt-3 space-y-5'>
             <div className='w-full h-1/5 bg-[#d5d0f0] rounded-xl relative drop-shadow-xl overflow-hidden'>
                 <img className='absolute right-0 h-full rounded-r-lg w-52' src="/flower.png" alt=""/>
 
@@ -176,10 +176,10 @@ function App() {
                             className='w-7 h-7 absolute bottom-[-15px] text-gray-950 left-auto ring-auto' />
 
                     </p>
-                    <div className='flex items-end space-x-3 bottom-5 absolute'>
-                        <div className='w-6 h-16 bg-pink-100 rounded-lg'></div>
-                        <div className='w-6 h-28 bg-purple-300 rounded-lg'></div>
-                        <div className='w-6 h-20 bg-pink-100 rounded-lg'></div>
+                    <div className='flex items-end space-x-4 bottom-5 absolute w-full'>
+                        <div className='w-7 h-16 bg-pink-100 rounded-lg'></div>
+                        <div className='w-7 h-28 bg-purple-300 rounded-lg'></div>
+                        <div className='w-7 h-20 bg-pink-100 rounded-lg'></div>
                     </div>
 
                 </div>
@@ -269,7 +269,7 @@ function App() {
             <div className='h-auto w-full overflow-hidden'>
                 <div className='flex justify-between items-center pl-8 pr-2'>
                     <p className='text-5xl font-medium'>May,2023</p>
-                    <div className='flex justify-between items-center w-24 px-1 mr-5'>
+                    <div className='flex justify-between items-center w-24 px-1 mr-7'>
                         <button>
                             <RiArrowLeftSLine className='p-0.5 w-9 h-9 bg-white rounded-full drop-shadow-md'/>
                         </button>
@@ -279,7 +279,7 @@ function App() {
                     </div>
 
                 </div>
-                <div className='pl-8 pt-5 flex space-x-7'>
+                <div className='pl-8 pt-5 flex space-x-3.5'>
                     <div className=' w-16 h-20 rounded-2xl text-white text-center py-3'>
                         <p className='text-stone-600'>Mon</p>
                         <p className='mt-2 font-bold text-black'>15</p>
