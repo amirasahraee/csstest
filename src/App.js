@@ -36,10 +36,9 @@ const items = [BsCameraVideo, BsPerson, BsFillGridFill, BsBookmark, BsCloud, BsD
 function App() {
     const [state, setState] = useState(2);
     return (<div className="bg-blue-50 w-full h-[100vh] flex">
-        {/*----- Menu Section -----*/}
         <div className="w-14 h-full px-1 py-2 ">
             <ul className="w-full h-full bg-gray-950 rounded-xl py-2">
-                <li><BsVimeo className='w-6 h-6 text-gray-100 mt-1 mb-10 m-auto'></BsVimeo></li>
+                <li><BsVimeo className='w-6 h-6 text-gray-100 mt-1 mb-10 m-auto' /></li>
                 {items.map((Icon, index) => (<li className="relative" onClick={() => {
                     setState(index)
                 }}>
@@ -48,11 +47,10 @@ function App() {
                         className={`w-8 h-8 p-2 text-gray-100 mb-10 m-auto hover:rounded-full hover:bg-blue-50 hover:text-gray-950 cursor-pointer ${state === index ? "rounded-full bg-blue-50 text-gray-950" : ''}`}/>
                 </li>))}
                 <li><FiLogOut
-                    className='w-8 h-8 p-2 ml-2.5 text-white bottom-6 absolute hover:rounded-full hover:bg-blue-50 hover:text-gray-950 cursor-pointer'></FiLogOut>
+                    className='w-8 h-8 p-2 ml-2.5 text-white bottom-6 absolute hover:rounded-full hover:bg-blue-50 hover:text-gray-950 cursor-pointer' />
                 </li>
             </ul>
         </div>
-        {/*----- BoxLeft -----*/}
         <div className='min-w-[800px] w-3/5 h-full ml-4 pt-3 space-y-5'>
             <div className='w-full h-1/5 bg-[#d5d0f0] rounded-xl relative drop-shadow-xl overflow-hidden'>
                 <img className='absolute right-0 h-full rounded-r-lg w-52' src="/flower.png" alt=""/>
@@ -64,7 +62,7 @@ function App() {
 
                     <span
                         className='bg-gray-950 text-[#d5d0f0] px-5 py-2 rounded-3xl ml-7 inline-flex items-center  cursor-pointer '>
-                    <AiOutlinePlusCircle className='w-5 h-5 text-[#d5d0f0] inline mr-1.5 '></AiOutlinePlusCircle>
+                    <AiOutlinePlusCircle className='w-5 h-5 text-[#d5d0f0] inline mr-1.5 '/>
                             Add member
 
                 </span>
@@ -74,7 +72,7 @@ function App() {
                 <div className='w-3/6 h-full rounded-2xl bg-white drop-shadow-xl overflow-hidden0 flex flex-col'>
                     <p className='flex flex-row items-center justify-between font-bold px-4 py-3'>
                         <span className='text-lg'>Members</span>
-                        <AiOutlinePlusCircle className='w-5 h-5 cursor-pointer'></AiOutlinePlusCircle>
+                        <AiOutlinePlusCircle className='w-5 h-5 cursor-pointer' />
                     </p>
 
                     <div
@@ -118,7 +116,7 @@ function App() {
                 <div className='w-2/6 rounded-2xl bg-white drop-shadow-xl px-4 py-3'>
                     <p className='flex justify-between items-center'>
                         <span>Data</span>
-                        <BsArrowRightShort className='w-6 h-6 cursor-pointer'></BsArrowRightShort>
+                        <BsArrowRightShort className='w-6 h-6 cursor-pointer' />
                     </p>
 
                     <p className='text-5xl mt-5'>10,4h</p>
@@ -173,7 +171,7 @@ function App() {
                     <p className='bg-gray-950 text-white w-12 py-1 px-2 rounded-xl mt-8 m-auto  text-xs relative'>
                         <span className=''>+56%</span>
                         <RiArrowDownSFill
-                            className='w-7 h-7 absolute bottom-[-15px] text-gray-950 left-auto ring-auto'></RiArrowDownSFill>
+                            className='w-7 h-7 absolute bottom-[-15px] text-gray-950 left-auto ring-auto' />
 
                     </p>
                     <div className='flex items-end space-x-3 bottom-5 absolute'>
@@ -202,12 +200,12 @@ function App() {
 
                     <div className='flex justify-between space-x-3 mt-3'>
                         <div className='bg-gray-100 w-1/2 h-32 rounded-xl text-center'>
-                            <FcWorkflow className='w-14 h-14 m-auto mt-1'></FcWorkflow>
+                            <FcWorkflow className='w-14 h-14 m-auto mt-1' />
                             <p className='text-3xl'>23</p>
                             <p className='text-gray-500'>Project complete</p>
                         </div>
                         <div className='bg-gray-100 w-1/2 h-32 rounded-xl text-center'>
-                            <FcFlowChart className='w-14 h-14 m-auto mt-1'></FcFlowChart>
+                            <FcFlowChart className='w-14 h-14 m-auto mt-1' />
                             <p className='text-3xl'>23</p>
                             <p className='text-gray-500'>Project complete</p>
                         </div>
@@ -260,8 +258,6 @@ function App() {
 
             </div>
         </div>
-
-        {/*---- BoxRight ----*/}
         <div className=' w-2/5 h-full pt-2 overflow-hidden'>
             <div className='h-auto w-full overflow-hidden'>
                 <div className='flex justify-between items-center pl-8 pr-2'>
