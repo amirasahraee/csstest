@@ -40,16 +40,16 @@ function App() {
     return (<div className="bg-blue-50 w-full h-[100vh] flex">
         <div className="w-14 h-full px-1 py-2 ">
             <ul className="w-full h-full bg-gray-950 rounded-xl py-2">
-                <li><BsVimeo className='w-6 h-6 text-gray-100 mt-1 mb-10 m-auto' /></li>
+                <li><BsVimeo className='w-6 h-6 text-gray-100 mt-1 mb-10 m-auto'/></li>
                 {items.map((Icon, index) => (<li className="relative" onClick={() => {
                     setState(index)
                 }}>
                     {index === state ? <BsPlayFill className={"w-5 h-5 absolute right-[-18px] mt-2"}/> : null}
                     <Icon
-                        className={`w-8 h-8 p-2 text-gray-100 mb-10 m-auto hover:rounded-full hover:bg-blue-50 hover:text-gray-950 cursor-pointer ${state === index ? "rounded-full bg-blue-50 text-gray-950" : ''}`}/>
+                        className={`w-8 h-8 p-2 text-gray-100 mb-10 m-auto hover:rounded-full hover:bg-blue-50 hover:text-gray-950 hover:p-1.5 cursor-pointer transition delay-75 duration-75 ease-in-out rounded-full ${state === index ? "rounded-full bg-blue-50 text-gray-950" : ''}`}/>
                 </li>))}
                 <li><FiLogOut
-                    className='w-8 h-8 p-2 ml-2 text-white bottom-6 absolute hover:rounded-full hover:bg-blue-50 hover:text-gray-950 cursor-pointer' />
+                    className='w-8 h-8 p-2 ml-2 text-white bottom-6 absolute hover:rounded-full hover:bg-blue-50 hover:text-gray-950 hover:p-1.5 cursor-pointer transition delay-75 duration-75 ease-in-out rounded-full'/>
                 </li>
             </ul>
         </div>
@@ -58,13 +58,13 @@ function App() {
                 <img className='absolute right-0 h-full rounded-r-lg w-52' src="/flower.png" alt=""/>
 
                 <p className='text-[2.4em] pl-7  pt-2'>Work`s always better together</p>
-                <div className='flex flex-row items-center mt-3 justify-between pr-48'>
+                <div className='flex flex-row items-end mt-5 justify-between pr-48'>
                     <p className='ml-7 text-md inline-block'>Add teammates and you`ll be able to
                         collaborate <br/> and quickly get sense of what`s happening at work.</p>
 
                     <span
-                        className='bg-gray-950 text-[#d5d0f0] px-5 py-2 rounded-3xl ml-7 inline-flex items-center  cursor-pointer '>
-                    <AiOutlinePlusCircle className='w-5 h-5 text-[#d5d0f0] inline mr-1.5 '/>
+                        className='bg-gray-950 text-[#d5d0f0] drop-shadow-xl px-5 py-2 rounded-3xl ml-7 inline-flex items-center transition-all delay-100 duration-100 ease-in-out border cursor-pointer hover:bg-[#e7e4f8]  hover:text-gray-950 hover:border-gray-950 border-gray-950 '>
+                    <AiOutlinePlusCircle className='w-5 h-5 inline mr-1.5 '/>
                             Add member
 
                 </span>
@@ -74,7 +74,7 @@ function App() {
                 <div className='w-3/6 h-full rounded-2xl bg-white drop-shadow-xl overflow-hidden0 flex flex-col'>
                     <p className='flex flex-row items-center justify-between font-bold px-4 py-3'>
                         <span className='text-lg'>Members</span>
-                        <AiOutlinePlusCircle className='w-5 h-5 cursor-pointer' />
+                        <AiOutlinePlusCircle className='w-5 h-5 cursor-pointer'/>
                     </p>
 
                     <div
@@ -118,7 +118,7 @@ function App() {
                 <div className='w-2/6 rounded-2xl bg-white drop-shadow-xl px-4 py-3'>
                     <p className='flex justify-between items-center'>
                         <span>Data</span>
-                        <BsArrowRightShort className='w-6 h-6 cursor-pointer' />
+                        <BsArrowRightShort className='w-6 h-6 cursor-pointer'/>
                     </p>
 
                     <p className='text-5xl mt-5'>10,4h</p>
@@ -126,9 +126,9 @@ function App() {
 
 
                         <div className='w-3/6'>
-                            <div className='flex items-start '>
+                            <div className='flex items-start h-full '>
 
-                                <div className='w-0.5 h-14 bg-gray-400 rounded-full'></div>
+                                <div className='w-0.5 h-full bg-gray-400 rounded-full'></div>
                                 <span className='text-gray-400 text-xs  ml-0.5'>9h39m</span>
                             </div>
                             <div className='mt-0.5 w-full h-2 bg-black rounded-full'></div>
@@ -140,9 +140,9 @@ function App() {
 
 
                         <div className='w-2/6'>
-                            <div className='flex items-start '>
+                            <div className='flex items-start h-full '>
 
-                                <div className='w-0.5 h-14 bg-gray-400 rounded-full'></div>
+                                <div className='w-0.5 h-full bg-gray-400 rounded-full'></div>
                                 <span className='text-gray-400 text-xs  ml-0.5'>2h27m</span>
                             </div>
                             <div className='mt-0.5 w-full h-2 bg-purple-300 rounded-full'></div>
@@ -152,10 +152,10 @@ function App() {
                             </p>
                         </div>
 
-                        <div className='w-1/6'>
-                            <div className='flex items-start '>
+                        <div className='w-1/6 h-[9vh]'>
+                            <div className='flex items-start h-full '>
 
-                                <div className='w-0.5 h-14 bg-gray-400 rounded-full'></div>
+                                <div className='w-0.5 h-full bg-gray-400 rounded-full'></div>
                                 <span className='text-gray-400 text-xs  ml-0.5'>42m</span>
                             </div>
                             <div className='mt-0.5 w-full h-2 bg-pink-100 rounded-full'></div>
@@ -175,7 +175,7 @@ function App() {
                             <p className='bg-gray-950 text-white w-12 py-1 px-2 rounded-xl m-auto  text-xs absolute top-[-35px] left-[-5px]'>
                                 <span className=''>+56%</span>
                                 <RiArrowDownSFill
-                                    className='w-7 h-7 absolute bottom-[-15px] text-gray-950 left-auto ring-auto' />
+                                    className='w-7 h-7 absolute bottom-[-15px] text-gray-950 left-auto ring-auto'/>
                             </p>
                         </div>
                         <div className='w-1/5 h-3/6 bg-pink-100 rounded-lg'></div>
@@ -189,12 +189,16 @@ function App() {
                         <span className='text-2xl'>Statistics</span>
                         <p className='space-x-1 text-sm bg-gray-200 pr-1 rounded-xl cursor-pointer'>
                             <button
-                            className={`${stateMon ? '' : 'bg-gray-950 text-white rounded-xl px-1' } `}  onClick={() => {
-                                setStateMon(false)
-                            }}>Weekly</button>
-                            <button className={`${stateMon ? 'bg-gray-950 text-white rounded-xl px-1' : ''} `}  onClick={() => {
-                                setStateMon(true)
-                            }}>Monthly</button>
+                                className={`${stateMon ? '' : 'bg-gray-950 text-white rounded-xl px-1'} `}
+                                onClick={() => {
+                                    setStateMon(false)
+                                }}>Weekly
+                            </button>
+                            <button className={`${stateMon ? 'bg-gray-950 text-white rounded-xl px-1' : ''} `}
+                                    onClick={() => {
+                                        setStateMon(true)
+                                    }}>Monthly
+                            </button>
                         </p>
                     </div>
                     <div className='flex items-end'>
@@ -206,12 +210,12 @@ function App() {
 
                     <div className='flex justify-between space-x-3 mt-3'>
                         <div className='bg-gray-100 w-1/2 h-32 rounded-xl text-center'>
-                            <FcWorkflow className='w-14 h-14 m-auto mt-1' />
+                            <FcWorkflow className='w-14 h-14 m-auto mt-1'/>
                             <p className='text-3xl'>23</p>
                             <p className='text-gray-500'>Project complete</p>
                         </div>
                         <div className='bg-gray-100 w-1/2 h-32 rounded-xl text-center'>
-                            <FcFlowChart className='w-14 h-14 m-auto mt-1' />
+                            <FcFlowChart className='w-14 h-14 m-auto mt-1'/>
                             <p className='text-3xl'>23</p>
                             <p className='text-gray-500'>Project complete</p>
                         </div>
@@ -246,16 +250,16 @@ function App() {
                     </div>
                     <div className="w-full h-3/5 bg-white rounded-2xl drop-shadow-xl py-1 px-2.5 flex">
                         <img src="/2.png" alt="" className='w-1/3 h-full'/>
-                        <div>
+                        <div className='relative'>
                             <p className='text-3xl ml-6'>Unleash Your <br/> Potential</p>
-                            <p className='text-md ml-6 text-stone-600'>Indulge in the <br/>ultimate subscription
+                            <p className='text-md ml-6 text-stone-600 mt-2 lg:text-sm'>Indulge in the <br/>ultimate subscription
                             </p>
 
                             <button
-                                className='flex justify-center items-center bg-violet-200  py-1.5 px-2.5 rounded-2xl m-auto mt-4'>
+                                className='flex justify-center drop-shadow-md items-center bg-violet-200 text-gray-950 py-1.5 px-2.5 rounded-2xl m-auto absolute bottom-2 left-5 transition-all delay-100 duration-100 ease-in-out border cursor-pointer hover:bg-gray-950  hover:text-violet-200 hover:border-violet-200'>
                                 <AiOutlineArrowUp
-                                    className='p-0.5 w-5 h-5 border-2 rounded-full text-stone-950 border-stone-500'/>
-                                <span className='ml-2 text-sm text-gray-950 font-medium'>Upgrade plan</span>
+                                    className='p-0.5 w-5 h-5 border-2 rounded-full border-stone-500'/>
+                                <span className='ml-2 text-sm font-medium'>Upgrade plan</span>
                             </button>
 
                         </div>
@@ -270,10 +274,10 @@ function App() {
                     <p className='text-5xl font-medium'>May,2023</p>
                     <div className='flex justify-between items-center w-24 px-1 mr-5 '>
                         <button>
-                            <RiArrowLeftSLine className='p-0.5 w-9 h-9 bg-white rounded-full drop-shadow-md'/>
+                            <RiArrowLeftSLine className='p-0.5 w-9 h-9 bg-white rounded-full drop-shadow-md hover:bg-stone-700 hover:text-white hover:drop-shadow-lg transition duration-75 delay-75 ease-in-out'/>
                         </button>
                         <button>
-                            <RiArrowRightSLine className='p-0.5 w-9 h-9 bg-white rounded-full drop-shadow-md'/>
+                            <RiArrowRightSLine className='p-0.5 w-9 h-9 bg-white rounded-full drop-shadow-md hover:bg-stone-700 hover:text-white hover:drop-shadow-lg transition duration-75 delay-75 ease-in-out'/>
                         </button>
                     </div>
 
@@ -389,9 +393,17 @@ function App() {
             <div className='h-full w-full pt-1.5 px-10'>
                 <div className='flex justify-between items-center'>
                     <p className='text-2xl'>Notification</p>
-                    <div className='flex items-center justify-between bg-white rounded-2xl p-0.5 drop-shadow'>
-                        <IoNotificationsOutline className={`w-7 h-7 p-1.5 ${stateNot? '': 'bg-gray-950 text-white rounded-full' }`} onClick={()=> {setStateNot(false)}}/>
-                        <IoNotificationsOffOutline className={`w-7 h-7 p-1.5 ${ stateNot? 'bg-gray-950 text-white rounded-full' : ''}`} onClick={()=>{setStateNot(true)}}/>
+                    <div className='flex items-center justify-between bg-white rounded-2xl p-0.5 drop-shadow cursor-pointer'>
+                        <IoNotificationsOutline
+                            className={`w-7 h-7 p-1.5 ${stateNot ? '' : 'bg-gray-950 text-white rounded-full'}`}
+                            onClick={() => {
+                                setStateNot(false)
+                            }}/>
+                        <IoNotificationsOffOutline
+                            className={`w-7 h-7 p-1.5 ${stateNot ? 'bg-gray-950 text-white rounded-full' : ''}`}
+                            onClick={() => {
+                                setStateNot(true)
+                            }}/>
                     </div>
                 </div>
                 <div className='w-full border-b space-x-3 text-gray-700 py-1 text-sm'>
@@ -400,10 +412,11 @@ function App() {
                     <span>Comments</span>
                 </div>
                 <div className='w-full h-20 rounded-2xl bg-white mt-2.5 drop-shadow-lg'>
-                    <div className='flex items-start relative py-2 px-3 space-x-3'>
+                    <div className='flex items-start relative py-2 px-3 space-x-3 justify-between'>
 
                         <img src="/profile2.jpg" alt="" className='w-11 h-11 object-cover rounded-full'/>
-                        <p className='text-[0.9em]'>Jennifer Campbell Invites You to a Call: 'Personal Development Strategies'</p>
+                        <p className='text-[0.9em]'>Jennifer Campbell Invites You to a Call: 'Personal Development
+                            Strategies'</p>
                         <button className='bg-gray-950 text-white px-2 py-0.5 rounded-2xl text-xs flex items-center'>
                             <GoLink className='mr-1'/> Link
                         </button>
@@ -416,10 +429,11 @@ function App() {
                     </div>
                 </div>
                 <div className='w-full h-20 rounded-2xl bg-white mt-2.5 drop-shadow-lg'>
-                    <div className='flex items-start relative py-2 px-3 space-x-3'>
+                    <div className='flex items-start relative py-2 px-3 space-x-3 justify-between'>
 
                         <img src="/profile2.jpg" alt="" className='w-11 h-11 object-cover rounded-full'/>
-                        <p className='text-[0.9em]'>Sarah Thompson Left a Comment on Your Video: 'Mastering the Art of Photography'</p>
+                        <p className='text-[0.9em]'>Sarah Thompson Left a Comment on Your Video: 'Mastering the Art of
+                            Photography'</p>
                         <button className='bg-gray-950 text-white px-2 py-0.5 rounded-2xl text-xs flex items-center'>
                             <GoLink className='mr-1'/> Link
                         </button>
@@ -432,7 +446,7 @@ function App() {
                     </div>
                 </div>
                 <div className='w-full h-20 rounded-2xl bg-white mt-2.5 drop-shadow-lg'>
-                    <div className='flex items-start relative py-2 px-3 space-x-3'>
+                    <div className='flex items-start relative py-2 px-3 space-x-3 justify-between'>
 
                         <img src="/profile2.jpg" alt="" className='w-11 h-11 object-cover rounded-full'/>
                         <p className='text-[0.9em]'>Daniel Turner Watched Your Video: 'Cooking with Passion'</p>
