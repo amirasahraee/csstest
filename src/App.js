@@ -35,6 +35,8 @@ const items = [BsCameraVideo, BsPerson, BsFillGridFill, BsBookmark, BsCloud, BsD
 
 function App() {
     const [state, setState] = useState(2);
+    const [stateMon, setStateMon] = useState(false);
+    const [stateNot, setStateNot] = useState(true);
     return (<div className="bg-blue-50 w-full h-[100vh] flex">
         <div className="w-14 h-full px-1 py-2 ">
             <ul className="w-full h-full bg-gray-950 rounded-xl py-2">
@@ -47,7 +49,7 @@ function App() {
                         className={`w-8 h-8 p-2 text-gray-100 mb-10 m-auto hover:rounded-full hover:bg-blue-50 hover:text-gray-950 cursor-pointer ${state === index ? "rounded-full bg-blue-50 text-gray-950" : ''}`}/>
                 </li>))}
                 <li><FiLogOut
-                    className='w-8 h-8 p-2 ml-2.5 text-white bottom-6 absolute hover:rounded-full hover:bg-blue-50 hover:text-gray-950 cursor-pointer' />
+                    className='w-8 h-8 p-2 ml-2 text-white bottom-6 absolute hover:rounded-full hover:bg-blue-50 hover:text-gray-950 cursor-pointer' />
                 </li>
             </ul>
         </div>
@@ -186,9 +188,14 @@ function App() {
                 <div className='w-3/5 h-full bg-white rounded-2xl px-4 py-2 drop-shadow-xl'>
                     <div className='flex justify-between items-center'>
                         <span className='text-2xl'>Statistics</span>
-                        <p className='space-x-1 text-sm bg-gray-200 pr-1 rounded-xl'><span
-                            className='bg-gray-950 text-white rounded-xl px-1 cursor-pointer'>Weekly</span>
-                            <span className=' cursor-pointer'>Monthly</span>
+                        <p className='space-x-1 text-sm bg-gray-200 pr-1 rounded-xl cursor-pointer'>
+                            <button
+                            className={`${stateMon ? '' : 'bg-gray-950 text-white rounded-xl px-1' } `}  onClick={() => {
+                                setStateMon(false)
+                            }}>Weekly</button>
+                            <button className={`${stateMon ? 'bg-gray-950 text-white rounded-xl px-1' : ''} `}  onClick={() => {
+                                setStateMon(true)
+                            }}>Monthly</button>
                         </p>
                     </div>
                     <div className='flex items-end'>
@@ -272,7 +279,7 @@ function App() {
                     </div>
 
                 </div>
-                <div className='pl-8 pt-5 flex space-x-5'>
+                <div className='pl-8 pt-5 flex space-x-7'>
                     <div className=' w-16 h-20 rounded-2xl text-white text-center py-3'>
                         <p className='text-stone-600'>Mon</p>
                         <p className='mt-2 font-bold text-black'>15</p>
@@ -384,8 +391,8 @@ function App() {
                 <div className='flex justify-between items-center'>
                     <p className='text-2xl'>Notification</p>
                     <div className='flex items-center justify-between bg-white rounded-2xl p-0.5 drop-shadow'>
-                        <IoNotificationsOutline className='w-7 h-7 p-1.5 bg-gray-950 text-white rounded-full '/>
-                        <IoNotificationsOffOutline className='w-7 h-7 p-1.5 '/>
+                        <IoNotificationsOutline className={`w-7 h-7 p-1.5 ${stateNot? '': 'bg-gray-950 text-white rounded-full' }`} onClick={()=> {setStateNot(false)}}/>
+                        <IoNotificationsOffOutline className={`w-7 h-7 p-1.5 ${ stateNot? 'bg-gray-950 text-white rounded-full' : ''}`} onClick={()=>{setStateNot(true)}}/>
                     </div>
                 </div>
                 <div className='w-full border-b space-x-3 text-gray-700 py-1 text-sm'>
